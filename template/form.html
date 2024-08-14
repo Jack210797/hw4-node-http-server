@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP server</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      width: min(100%-40px, 992px);
+      margin-inline: auto;
+    }
+
+    .mb-3 {
+      margin-bottom: 15px;
+    }
+
+    form {
+      margin: auto;
+    }
+
+    label {
+      display: block;
+    }
+
+    button,
+    input {
+      display: block;
+      padding: 7px 10px;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    input[type="checkbox"] {
+      display: inline-block;
+      width: auto;
+    }
+
+    input[type="checkbox"]+label {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <form action="/todos" method="POST">
+      <div class="mb-3">
+        <label for="id">ID</label>
+        <input type="number" name="id" id="id" placeholder="Enter your id" value="99">
+      </div>
+
+      <div class="mb-3">
+        <label for="userId">user id</label>
+        <input type="number" name="userId" id="userId" placeholder="User Id...." value="9">
+      </div>
+
+      <div class="mb-3">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" placeholder="Title...." value="New Todo Title">
+      </div>
+
+      <div class="mb-3">
+        <input type="checkbox" name="completed" id="completed" placeholder="Completed...." checked>
+        <label for="completed"> Completed</label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
